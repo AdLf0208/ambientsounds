@@ -1,0 +1,21 @@
+[package]
+# Port of AmbientSounds 6.3.11 (CreativeMD/AmbientSounds, branch `26.x` at
+# e4c8c2df10b51733652b5ac612fb9bd2f72c2326, Minecraft Java 26.3 NeoForge).
+# Not in ATM10: an external port. LGPL-3.0-only (rank 1, copyleft): the port is
+# a derivative under the same licence, ships the licence texts and its complete
+# source. See LICENSE-NOTICE.md. Clean-room Rust rewrite from the mod's
+# behaviour (FINDINGS.md); local-only until publishing is approved.
+#
+# Cargo's name and version are not the mod's identity: horizon-mod.toml is.
+name = "horizon-ambientsounds"
+version = "0.2.0"
+edition = "2024"
+license = "LGPL-3.0-only"
+description = "AmbientSounds for Horizon: the environment engine with cave and wind beds"
+publish = false
+
+[dependencies]
+# The pinned SDK's API crate, fetched into .horizon/sdk/ by any `cargo horizon-mod` command (the
+# launcher builds against its own copy of the same build). Any other registry dependency must be
+# pinned with `horizon-launcher native-lock .` before building.
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }

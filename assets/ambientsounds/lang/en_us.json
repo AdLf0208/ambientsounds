@@ -1,0 +1,6 @@
+{
+  "ambientsounds.setting.engine": "Environment engine",
+  "ambientsounds.setting.engine.tooltip": "Play the AmbientSounds beds. Off fades the playing bed out and lets vanilla's music return.",
+  "ambientsounds.setting.volume": "Environment volume",
+  "ambientsounds.setting.volume.tooltip": "How loud the AmbientSounds beds play, 0 to 1."
+}

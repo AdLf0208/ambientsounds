@@ -1,0 +1,32 @@
+id = "ambientsounds"
+name = "AmbientSounds"
+version = "0.2.0"
+description = """The environment engine of AmbientSounds 6.3.11 for Horizon: a slow scan of the terrain,
+the sky exposure, the weather and the biome drives the mod's own region conditions, and the `cave` and
+`wind` ambient beds ease in and out through the game's music layers while vanilla's own music is held
+back. `/ambientsounds status|engine|volume|rescan` reports what the engine decided; the engine's switch
+and volume are also two settings on the mod's page in Options > Mods. This slice carries the two `.ogg`
+takes it plays and the regions that decide them; the other 118 takes, the air-pocket scan, the
+cross-fade between takes and the pitch curves are not ported yet."""
+# LGPL-3.0-only (the original's own `mods.toml` label); the licence text, the GPL
+# text it refers to and the provenance notice travel inside the package as
+# LICENSE, LICENSE-GPL-3.0 and LICENSE-NOTICE.md.
+authors = ["CreativeMD", "AriaFreeze", "AdLf0208"]
+# The mod API this package is written against; exact, and the only value the schema takes.
+api = "0.2"
+# The installation side, not the hook's: the engine and the music hooks are
+# client-side, and the `/ambientsounds` command (and the setting writes it makes)
+# run on the server, which single player and a LAN host have inside the client
+# installation. A dedicated server never hears a bed, so neither side is left out.
+side = "both"
+# The one shared value every manifest carries ("May add blocks, items, mob effects
+# and entity types"). This mod registers nothing but two settings; the field is a
+# schema requirement, not a claim about content, so do not "correct" it.
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+# SDK 0b14f8acfd97fa2c750e42795249dcc981178ca4 (package_format 6, content_api "0.2"),
+# and the mixins revision that SDK was cut with; both exact 40-hex.
+horizon = "0b14f8acfd97fa2c750e42795249dcc981178ca4"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"

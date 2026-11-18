@@ -1,0 +1,20 @@
+{
+    "cave.cave1": {
+        "category": "ambient",
+        "sounds": [
+            {
+                "name": "ambientsounds:cave/cave1",
+                "stream": true
+            }
+        ]
+    },
+    "wind.light-wind": {
+        "category": "ambient",
+        "sounds": [
+            {
+                "name": "ambientsounds:wind/light-wind",
+                "stream": true
+            }
+        ]
+    }
+}
